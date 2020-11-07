@@ -12,7 +12,7 @@ prelude:
 - |
    PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
    mkdir -p /${REAL_PACKAGE_NAME} && \
-   luet install libs/zlib shells/bash development/autoconf development/make utils/ca-certificates libs/libressl vcs/git && \
+   luet install libs/zlib shells/bash utils/autoconf development/make utils/ca-certificates libs/libressl vcs/git && \
    git clone https://github.com/glennrp/libpng ${REAL_PACKAGE_NAME} && cd ${REAL_PACKAGE_NAME} && git checkout -b build v${PACKAGE_VERSION}
 
 steps:
