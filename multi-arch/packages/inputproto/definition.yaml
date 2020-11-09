@@ -1,13 +1,11 @@
 name: inputproto
+version: 2.3.2+1
 category: X
-version: "2.3.2"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-
+description: X11 Input extension wire protocol
 uri:
 - https://xorg.freedesktop.org/
-license: "MIT"
-
-description: "X11 Input extension wire protocol"
+license: MIT
