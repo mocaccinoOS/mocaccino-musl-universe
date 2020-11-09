@@ -1,17 +1,16 @@
 name: libxdmcp
+version: 1.1.2+1
 category: X
-version: "1.1.2"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "xorg-macros"
-  autobump.string_replace: '{ "util-macros-": "" }'
-  github.owner: "freedesktop"
+description: X.Org Autotools macros
 uri:
 - https://github.com/freedesktop/xorg-macros/
 - https://xorg.freedesktop.org/
-license: "custom"
-
-description: "X.Org Autotools macros"
+license: custom
+labels:
+  autobump.string_replace: '{ "util-macros-": "" }'
+  github.owner: freedesktop
+  github.repo: xorg-macros
