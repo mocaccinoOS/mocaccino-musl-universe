@@ -1,13 +1,11 @@
 name: xextproto
+version: 7.3.0+1
 category: X
-version: "7.3.0"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-
+description: X11 various extension wire protocol
 uri:
 - https://xorg.freedesktop.org/
-license: "custom"
-
-description: "X11 various extension wire protocol"
+license: custom
