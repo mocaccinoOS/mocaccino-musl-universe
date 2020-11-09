@@ -1,17 +1,16 @@
 name: libxau
+version: 1.0.9+1
 category: X
-version: "1.0.9"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels: 
-  github.repo: "xorg-libXau"
-  autobump.string_replace: '{ "libXau-": "" }'
-  github.owner: "freedesktop"
+description: X11 authorisation library
 uri:
 - https://github.com/freedesktop/xorg-libXau/
 - https://xorg.freedesktop.org/
-license: "MIT"
-
-description: "X11 authorisation library"
+license: MIT
+labels:
+  autobump.string_replace: '{ "libXau-": "" }'
+  github.owner: freedesktop
+  github.repo: xorg-libXau
