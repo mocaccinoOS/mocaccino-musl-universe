@@ -1,16 +1,15 @@
 name: libxcb
+version: 1.14+1
 category: X
-version: "1.14"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "xcb-libxcb"
-  github.owner: "freedesktop"
+description: X11 client-side library
 uri:
 - https://github.com/freedesktop/xcb-libxcb/
 - https://xorg.freedesktop.org/
-license: "MIT"
-
-description: "X11 client-side library"
+license: MIT
+labels:
+  github.owner: freedesktop
+  github.repo: xcb-libxcb
