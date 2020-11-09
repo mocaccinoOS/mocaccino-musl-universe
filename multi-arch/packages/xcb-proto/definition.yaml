@@ -1,15 +1,14 @@
 name: xcb-proto
+version: 1.14.1+1
 category: X
-version: "1.14.1"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "xcb-proto"
-  github.owner: "ch11ng"
+description: XML-XCB protocol descriptions
 uri:
 - https://xorg.freedesktop.org/
-license: "custom"
-
-description: "XML-XCB protocol descriptions"
+license: custom
+labels:
+  github.owner: ch11ng
+  github.repo: xcb-proto
