@@ -1,0 +1,13 @@
+name: kbproto
+category: X
+version: "1.0.7"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+
+uri:
+- https://xorg.freedesktop.org/
+license: "MIT"
+
+description: "X11 XKB extension wire protocol"

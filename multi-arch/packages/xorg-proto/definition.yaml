@@ -1,0 +1,17 @@
+name: xproto
+category: X
+version: "7.0.31"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+labels:
+  github.repo: "xorg-xorgproto"
+  autobump.string_replace: '{ "xorgproto-": "" }'
+  github.owner: "freedesktop"
+uri:
+- https://github.com/freedesktop/xorg-xorgproto
+- https://xorg.freedesktop.org/
+license: "custom"
+
+description: "X11 core wire protocol and auxiliary headers"
