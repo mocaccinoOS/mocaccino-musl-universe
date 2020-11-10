@@ -1,9 +1,22 @@
 requires:
-
+- category: "X"
+  name: "xorgproto"
+  version: ">=0"
+- category: "X"
+  name: "libX11"
+  version: ">=0"
+- category: "X"
+  name: "libXext"
+  version: ">=0"
+- category: "X"
+  name: "libXt"
+  version: ">=0"
 - category: "X"
   name: "util-macros"
   version: ">=0"
-
+- category: "X"
+  name: "libSM"
+  version: ">=0"
 env:
 - CFLAGS="-g -O2 -I/include -I/usr/include -I/usr/include/X11 -static"
 - CPPFLAGS="-I/include -I/usr/include -I/usr/include/X11 -static"

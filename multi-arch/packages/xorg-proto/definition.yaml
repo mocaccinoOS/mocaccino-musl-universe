@@ -1,6 +1,6 @@
-name: xproto
+name: xorgproto
 category: X
-version: "7.0.31"
+version: "2020.1"
 requires:
 - name: musl
   category: system
@@ -10,8 +10,10 @@ labels:
   autobump.string_replace: '{ "xorgproto-": "" }'
   github.owner: "freedesktop"
 uri:
-- https://github.com/freedesktop/xorg-xorgproto
+- https://github.com/freedesktop/libXScrnSaver
 - https://xorg.freedesktop.org/
-license: "custom"
+license: "BSD-2-Clause AND MIT AND X11"
+description: "Combined X.Org X11 protocol headers"
 
-description: "X11 core wire protocol and auxiliary headers"
+base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
+extension: "tar.bz2"
