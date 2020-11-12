@@ -1,16 +1,15 @@
 name: libX11
+version: 1.6.12+1
 category: X
-version: "1.6.12"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "xorg-libX11"
-  github.owner: "freedesktop"
+description: X11 client-side library
 uri:
 - https://github.com/freedesktop/xorg-libX11/
 - https://xorg.freedesktop.org/
-license: "custom:XFREE86"
-
-description: "X11 client-side library"
+license: custom:XFREE86
+labels:
+  github.owner: freedesktop
+  github.repo: xorg-libX11
