@@ -1,19 +1,16 @@
 name: libXt
+version: 1.2.0+1
 category: X
-version: "1.2.0"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "xorg-libXt"
-  autobump.string_replace: '{ "libXt-": "" }'
-  github.owner: "freedesktop"
+description: X11 toolkit intrinsics library
 uri:
 - https://github.com/freedesktop/libXScrnSaver
 - https://xorg.freedesktop.org/
-license: "MIT"
-description: "X11 toolkit intrinsics library"
-
-base_url: "https://www.x.org/releases/individual/lib/"
-extension: "tar.bz2"
+license: MIT
+labels:
+  autobump.string_replace: '{ "libXt-": "" }'
+  github.owner: freedesktop
+  github.repo: xorg-libXt
