@@ -1,19 +1,16 @@
 name: libXScrnSaver
+version: 1.2.3+1
 category: X
-version: "1.2.3"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "libXScrnSaver"
-  autobump.string_replace: '{ "libXScrnSaver-": "" }'
-  github.owner: "freedesktop"
+description: X11 Session Management library
 uri:
 - https://github.com/freedesktop/libXScrnSaver
 - https://xorg.freedesktop.org/
-license: "MIT"
-description: "X11 Session Management library"
-
-base_url: "https://www.x.org/releases/individual/lib/"
-extension: "tar.gz"
+license: MIT
+labels:
+  autobump.string_replace: '{ "libXScrnSaver-": "" }'
+  github.owner: freedesktop
+  github.repo: libXScrnSaver
