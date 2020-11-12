@@ -1,19 +1,16 @@
 name: libXpm
+version: 3.5.13+1
 category: X
-version: "3.5.13"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "libXpm"
-  autobump.string_replace: '{ "libXpm-": "" }'
-  github.owner: "freedesktop"
+description: X11 pixmap library
 uri:
 - https://github.com/freedesktop/libXpm
 - https://xorg.freedesktop.org/
-license: "custom:BELL"
-description: "X11 pixmap library"
-
-base_url: "https://www.x.org/releases/individual/lib/"
-extension: "tar.bz2"
+license: custom:BELL
+labels:
+  autobump.string_replace: '{ "libXpm-": "" }'
+  github.owner: freedesktop
+  github.repo: libXpm
