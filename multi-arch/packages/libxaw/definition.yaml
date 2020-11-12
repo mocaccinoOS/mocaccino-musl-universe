@@ -1,19 +1,16 @@
 name: libXaw
+version: 1.0.13+1
 category: X
-version: "1.0.13"
 requires:
 - name: musl
+  version: '>=0'
   category: system
-  version: ">=0"
-labels:
-  github.repo: "xorg-libXaw"
-  autobump.string_replace: '{ "libXaw-": "" }'
-  github.owner: "freedesktop"
+description: X Athena Widget Set
 uri:
 - https://github.com/freedesktop/xorg-libXaw
 - https://xorg.freedesktop.org/
-license: "MIT"
-description: "X Athena Widget Set"
-
-base_url: "https://www.x.org/releases/individual/lib/"
-extension: "tar.bz2"
+license: MIT
+labels:
+  autobump.string_replace: '{ "libXaw-": "" }'
+  github.owner: freedesktop
+  github.repo: xorg-libXaw
