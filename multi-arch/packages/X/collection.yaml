@@ -20,6 +20,7 @@ packages:
     github.repo: "libXpm"
     autobump.string_replace: '{ "libXpm-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/libXpm
   - https://xorg.freedesktop.org/
@@ -57,6 +58,7 @@ packages:
     github.repo: "xorg-libXmu"
     autobump.string_replace: '{ "libXmu-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXmu
   - https://xorg.freedesktop.org/
@@ -99,6 +101,7 @@ packages:
     github.repo: "xorg-xorgproto"
     autobump.string_replace: '{ "xorgproto-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/libXScrnSaver
   - https://xorg.freedesktop.org/
@@ -127,6 +130,7 @@ packages:
     github.repo: "xorg-libXfixes"
     autobump.string_replace: '{ "libXfixes-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXfixes
   - https://xorg.freedesktop.org/
@@ -161,6 +165,7 @@ packages:
     github.repo: "xorg-libXcomposite"
     autobump.string_replace: '{ "libXcomposite-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXcomposite
   - https://xorg.freedesktop.org/
@@ -189,6 +194,7 @@ packages:
     github.repo: "xorg-libXrender"
     autobump.string_replace: '{ "libXrender-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXrender
   - https://xorg.freedesktop.org/
@@ -226,6 +232,7 @@ packages:
     github.repo: "xorg-libXcursor"
     autobump.string_replace: '{ "libXcursor-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXcursor
   - https://xorg.freedesktop.org/
@@ -260,6 +267,7 @@ packages:
     github.repo: "xorg-libXdamage"
     autobump.string_replace: '{ "libXdamage-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXdamage
   - https://xorg.freedesktop.org/
@@ -286,6 +294,7 @@ packages:
     github.repo: "xorg-libfontenc"
     autobump.string_replace: '{ "libfontenc-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libfontenc
   - https://xorg.freedesktop.org/
@@ -315,6 +324,7 @@ packages:
     github.repo: "libXScrnSaver"
     autobump.string_replace: '{ "libXScrnSaver-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/libXScrnSaver
   - https://xorg.freedesktop.org/
@@ -349,6 +359,7 @@ packages:
     github.repo: "xorg-libXt"
     autobump.string_replace: '{ "libXt-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/libXScrnSaver
   - https://xorg.freedesktop.org/
@@ -391,6 +402,7 @@ packages:
     github.repo: "xorg-macros"
     autobump.string_replace: '{ "util-macros-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-macros/
   - https://xorg.freedesktop.org/
@@ -421,6 +433,7 @@ packages:
   labels:
     github.repo: "xcb-libxcb"
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xcb-libxcb/
   - https://xorg.freedesktop.org/
@@ -458,6 +471,7 @@ packages:
     github.repo: "xorg-libXaw"
     autobump.string_replace: '{ "libXaw-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXaw
   - https://xorg.freedesktop.org/
@@ -483,6 +497,7 @@ packages:
     github.repo: "xorg-libXau"
     autobump.string_replace: '{ "libXau-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libXau/
   - https://xorg.freedesktop.org/
@@ -505,6 +520,7 @@ packages:
     github.repo: "xorg-macros"
     autobump.string_replace: '{ "util-macros-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-macros/
   - https://xorg.freedesktop.org/
@@ -541,6 +557,7 @@ packages:
   labels:
     github.repo: "xorg-libX11"
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-libX11/
   - https://xorg.freedesktop.org/
@@ -572,6 +589,7 @@ packages:
     github.repo: "libSM"
     autobump.string_replace: '{ "libSM-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/libSM
   - https://xorg.freedesktop.org/
@@ -699,6 +717,7 @@ packages:
     github.repo: "xorg-libxtrans"
     autobump.string_replace: '{ "xtrans-": "" }'
     github.owner: "freedesktop"
+    autobump.strategy: "release"
   uri:
   - https://github.com/freedesktop/xorg-macros/
   - https://xorg.freedesktop.org/
