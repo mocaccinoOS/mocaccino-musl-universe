@@ -1,303 +1,8 @@
 packages:
-- name: libXpm
-  category: X
-  version: "3.5.13"
-  build_requires:
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "libXext"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "libXpm"
-    autobump.string_replace: '{ "libXpm-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/libXpm
-  - https://xorg.freedesktop.org/
-  license: "custom:BELL"
-  description: "X11 pixmap library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXmu
-  category: X
-  version: "1.1.3"
-  build_requires:
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "libXext"
-      version: ">=0"
-    - category: "X"
-      name: "libXt"
-      version: ">=0"
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "libSM"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXmu"
-    autobump.string_replace: '{ "libXmu-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXmu
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X11 miscellaneous micro-utility library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: xextproto
-  category: X
-  build_requires:
-    - category: "X"
-      name: "xtrans"
-      version: ">=0"
-    - category: "X"
-      name: "xproto"
-      version: ">=0"
-  base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
-  extension: "tar.gz"
-  version: "7.3.0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  uri:
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  description: "X11 various extension wire protocol"
-- name: xorgproto
-  category: X
-  version: "2020.1"
-  build_requires:
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-xorgproto"
-    autobump.string_replace: '{ "xorgproto-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/libXScrnSaver
-  - https://xorg.freedesktop.org/
-  license: "BSD-2-Clause AND MIT AND X11"
-  description: "Combined X.Org X11 protocol headers"
-  base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
-  extension: "tar.bz2"
-- name: libXfixes
-  category: X
-  version: "5.0.3"
-  build_requires:
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXfixes"
-    autobump.string_replace: '{ "libXfixes-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXfixes
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  description: "X11 miscellaneous 'fixes' extension library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXcomposite
-  category: X
-  version: "0.4.5"
-  build_requires:
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-    - category: "X"
-      name: "libXfixes"
-      version: ">=0"
-    - category: "X"
-      name: "libXext"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXcomposite"
-    autobump.string_replace: '{ "libXcomposite-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXcomposite
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  description: X11 Composite extension library
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXrender
-  category: X
-  version: "0.9.10"
-  build_requires:
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXrender"
-    autobump.string_replace: '{ "libXrender-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXrender
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  description: "X Rendering Extension client library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXcursor
-  category: X
-  version: "1.2.0"
-  build_requires:
-    - category: "X"
-      name: "libXrender"
-      version: ">=0"
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-    - category: "X"
-      name: "libXfixes"
-      version: ">=0"
-    - category: "X"
-      name: "libXext"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXcursor"
-    autobump.string_replace: '{ "libXcursor-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXcursor
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X cursor management library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXdamage
-  category: X
-  version: "1.1.5"
-  build_requires:
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-    - category: "X"
-      name: "libXfixes"
-      version: ">=0"
-    - category: "X"
-      name: "libXext"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXdamage"
-    autobump.string_replace: '{ "libXdamage-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXdamage
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X11 damaged region extension library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-
-- name: libfontenc
-  category: X
-  version: "1.1.4"
-  build_requires:
-    - category: "X"
-      name: "util-macros"
-      version: ">=0"
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libfontenc"
-    autobump.string_replace: '{ "libfontenc-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libfontenc
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X11 damaged region extension library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-
-- name: libXScrnSaver
-  category: X
-  version: "1.2.3"
-  build_requires:
+  - name: libXpm
+    category: X
+    version: "3.5.13"
+    build_requires:
       - category: "X"
         name: "xorgproto"
         version: ">=0"
@@ -307,402 +12,694 @@ packages:
       - category: "X"
         name: "libXext"
         version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "libXScrnSaver"
-    autobump.string_replace: '{ "libXScrnSaver-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/libXScrnSaver
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X11 Session Management library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.gz"
-- name: libXt
-  build_requires:
-    - category: "X"
-      name: "xorgproto"
-      version: ">=0"
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "libXext"
-      version: ">=0"
-    - category: "X"
-      name: "libICE"
-      version: ">=0"
-    - category: "X"
-      name: "libSM"
-      version: ">=0"
-  category: X
-  version: "1.2.0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXt"
-    autobump.string_replace: '{ "libXt-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/libXScrnSaver
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X11 toolkit intrinsics library"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXext
-  build_requires:
-    - category: "X"
-      name: "libX11"
-      version: ">=0"
-    - category: "X"
-      name: "libXau"
-      version: ">=0"
-  category: X
-  version: "1.3.3"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  uri:
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  description: "X11 various extension wire protocol"
-  base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libxdmcp
-  category: X
-  build_requires:
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  version: "1.1.2"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-macros"
-    autobump.string_replace: '{ "util-macros-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-macros/
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  description: "X.Org Autotools macros"
-  base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libxcb
-  category: X
-  version: "1.14"
-  build_requires:
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  - category: "X"
-    name: "xcb-proto"
-    version: ">=0"
-  - category: "X"
-    name: "libXau"
-    version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xcb-libxcb"
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xcb-libxcb/
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  base_url: "https://xorg.freedesktop.org/archive/individual/lib/"
-  extension: "tar.gz"
-  description: "X11 client-side library"
-- name: libXaw
-  category: X
-  version: "1.0.13"
-  build_requires:
-  - category: "X"
-    name: "util-macros"
-    version: ">=0"
-  - category: "X"
-    name: "libXext"
-    version: ">=0"
-  - category: "X"
-    name: "libXmu"
-    version: ">=0"
-  - category: "X"
-    name: "libXpm"
-    version: ">=0"
-  - category: "X"
-    name: "libX11"
-    version: ">=0"
-  - category: "X"
-    name: "xorgproto"
-    version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libXaw"
-    autobump.string_replace: '{ "libXaw-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXaw
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  description: "X Athena Widget Set"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-- name: libXau
-  category: X
-  build_requires:
-  - category: "X"
-    name: "util-macros"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  version: "1.0.9"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels: 
-    github.repo: "xorg-libXau"
-    autobump.string_replace: '{ "libXau-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libXau/
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-  description: "X11 authorisation library"
-- name: util-macros
-  category: X
-  build_requires:
-  - category: "development"
-    name: "toolchain"
-    version: ">=0"
-  version: "1.19.2"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-macros"
-    autobump.string_replace: '{ "util-macros-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-macros/
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  base_url: "http://ftp.x.org/pub/individual/util/"
-  extension: "tar.bz2"
-  description: "X.Org Autotools macros"
-- name: libX11
-  category: X
-  version: "1.6.12"
-  build_requires:
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  - name: libxcb
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "libXpm"
+      autobump.string_replace: '{ "libXpm-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/libXpm
+      - https://xorg.freedesktop.org/
+    license: "custom:BELL"
+    description: "X11 pixmap library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXmu
     category: X
-    version: ">=0"
+    version: "1.1.3"
+    build_requires:
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+      - category: "X"
+        name: "libXt"
+        version: ">=0"
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libSM"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXmu"
+      autobump.string_replace: '{ "libXmu-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXmu
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X11 miscellaneous micro-utility library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
   - name: xextproto
     category: X
-    version: ">=0"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+    base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
+    extension: "tar.gz"
+    version: "7.3.0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    uri:
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    description: "X11 various extension wire protocol"
+  - name: xorgproto
+    category: X
+    version: "2020.1"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-xorgproto"
+      autobump.string_replace: '{ "xorgproto-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/libXScrnSaver
+      - https://xorg.freedesktop.org/
+    license: "BSD-2-Clause AND MIT AND X11"
+    description: "Combined X.Org X11 protocol headers"
+    base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
+    extension: "tar.bz2"
+  - name: libXfixes
+    category: X
+    version: "5.0.3"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXfixes"
+      autobump.string_replace: '{ "libXfixes-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXfixes
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    description: "X11 miscellaneous 'fixes' extension library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXcomposite
+    category: X
+    version: "xcomposite-0_3"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+      - category: "X"
+        name: "libXfixes"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXcomposite"
+      autobump.string_replace: '{ "libXcomposite-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXcomposite
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    description: X11 Composite extension library
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXrender
+    category: X
+    version: "0.9.10"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXrender"
+      autobump.string_replace: '{ "libXrender-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXrender
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    description: "X Rendering Extension client library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXcursor
+    category: X
+    version: "1.2.0"
+    build_requires:
+      - category: "X"
+        name: "libXrender"
+        version: ">=0"
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+      - category: "X"
+        name: "libXfixes"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXcursor"
+      autobump.string_replace: '{ "libXcursor-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXcursor
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X cursor management library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXdamage
+    category: X
+    version: "1.1.5"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+      - category: "X"
+        name: "libXfixes"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXdamage"
+      autobump.string_replace: '{ "libXdamage-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXdamage
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X11 damaged region extension library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libfontenc
+    category: X
+    version: "1.1.4"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libfontenc"
+      autobump.string_replace: '{ "libfontenc-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libfontenc
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X11 damaged region extension library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXScrnSaver
+    category: X
+    version: "1.2.3"
+    build_requires:
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "libXScrnSaver"
+      autobump.string_replace: '{ "libXScrnSaver-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/libXScrnSaver
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X11 Session Management library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.gz"
+  - name: libXt
+    build_requires:
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+      - category: "X"
+        name: "libICE"
+        version: ">=0"
+      - category: "X"
+        name: "libSM"
+        version: ">=0"
+    category: X
+    version: "1.2.0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXt"
+      autobump.string_replace: '{ "libXt-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/libXScrnSaver
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X11 toolkit intrinsics library"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXext
+    build_requires:
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "libXau"
+        version: ">=0"
+    category: X
+    version: "1.3.3"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    uri:
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    description: "X11 various extension wire protocol"
+    base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libxdmcp
+    category: X
+    build_requires:
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+    version: "1.1.2"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-macros"
+      autobump.string_replace: '{ "util-macros-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-macros/
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    description: "X.Org Autotools macros"
+    base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libxcb
+    category: X
+    version: "1.14"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+      - category: "X"
+        name: "xcb-proto"
+        version: ">=0"
+      - category: "X"
+        name: "libXau"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xcb-libxcb"
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xcb-libxcb/
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    base_url: "https://xorg.freedesktop.org/archive/individual/lib/"
+    extension: "tar.gz"
+    description: "X11 client-side library"
+  - name: libXaw
+    category: X
+    version: "1.0.13"
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "libXext"
+        version: ">=0"
+      - category: "X"
+        name: "libXmu"
+        version: ">=0"
+      - category: "X"
+        name: "libXpm"
+        version: ">=0"
+      - category: "X"
+        name: "libX11"
+        version: ">=0"
+      - category: "X"
+        name: "xorgproto"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXaw"
+      autobump.string_replace: '{ "libXaw-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXaw
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    description: "X Athena Widget Set"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+  - name: libXau
+    category: X
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+    version: "1.0.9"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libXau"
+      autobump.string_replace: '{ "libXau-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libXau/
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+    description: "X11 authorisation library"
+  - name: util-macros
+    category: X
+    build_requires:
+      - category: "development"
+        name: "toolchain"
+        version: ">=0"
+    version: "1.19.2"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-macros"
+      autobump.string_replace: '{ "util-macros-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-macros/
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    base_url: "http://ftp.x.org/pub/individual/util/"
+    extension: "tar.bz2"
+    description: "X.Org Autotools macros"
+  - name: libX11
+    category: X
+    version: "1.6.12"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+      - name: libxcb
+        category: X
+        version: ">=0"
+      - name: xextproto
+        category: X
+        version: ">=0"
+      - name: kbproto
+        category: X
+        version: ">=0"
+      - name: inputproto
+        category: X
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libX11"
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-libX11/
+      - https://xorg.freedesktop.org/
+    license: "custom:XFREE86"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+    description: "X11 client-side library"
+  - name: libSM
+    category: X
+    version: "1.2.3"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+      - category: "X"
+        name: "xcb-proto"
+        version: ">=0"
+      - category: "X"
+        name: "libICE"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "libSM"
+      autobump.string_replace: '{ "libSM-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/libSM
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+    description: "X11 Session Management library"
+  - name: libICE
+    category: X
+    build_requires:
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+    version: "1.0.10"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    uri:
+      - https://xorg.freedesktop.org/
+    license: "X11"
+    base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
+    extension: "tar.bz2"
+    description: "X11 Inter-Client Exchange library"
   - name: kbproto
     category: X
-    version: ">=0"
+    version: "1.0.7"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    uri:
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
+    extension: "tar.gz"
+    description: "X11 XKB extension wire protocol"
   - name: inputproto
     category: X
-    version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libX11"
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-libX11/
-  - https://xorg.freedesktop.org/
-  license: "custom:XFREE86"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-  description: "X11 client-side library"
-- name: libSM
-  category: X
-  version: "1.2.3"
-  build_requires:
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  - category: "X"
-    name: "xcb-proto"
-    version: ">=0"
-  - category: "X"
-    name: "libICE"
-    version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "libSM"
-    autobump.string_replace: '{ "libSM-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/libSM
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-  description: "X11 Session Management library"
-- name: libICE
-  category: X
-  build_requires:
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  - category: "X"
-    name: "util-macros"
-    version: ">=0"
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  version: "1.0.10"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  uri:
-  - https://xorg.freedesktop.org/
-  license: "X11"
-  base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
-  extension: "tar.bz2"
-  description: "X11 Inter-Client Exchange library"
-- name: kbproto
-  category: X
-  version: "1.0.7"
-  build_requires:
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-
-  uri:
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
-  extension: "tar.gz"
-  description: "X11 XKB extension wire protocol"
-- name: inputproto
-  category: X
-  version: "2.3.2"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  build_requires:
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  uri:
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
-  extension: "tar.gz"
-  description: "X11 Input extension wire protocol"
-- name: xcb-proto
-  category: X
-  version: "1.14.1"
-  build_requires:
-  - category: "X"
-    name: "xtrans"
-    version: ">=0"
-  - category: "X"
-    name: "xproto"
-    version: ">=0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xcb-proto"
-    github.owner: "ch11ng"
-  uri:
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
-  extension: "tar.xz"
-  description: "XML-XCB protocol descriptions"
-- name: xproto
-  category: X
-  build_requires:
-  - category: "development"
-    name: "toolchain"
-    version: ">=0"
-  version: "7.0.31"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  uri:
-  - https://github.com/freedesktop/xorg-xorgproto
-  - https://xorg.freedesktop.org/
-  license: "custom"
-  base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
-  extension: "tar.bz2"
-  description: "X11 core wire protocol and auxiliary headers"
-- name: xtrans
-  category: X
-  build_requires:
-  - category: "X"
-    name: "util-macros"
-    version: ">=0"
-  version: "1.4.0"
-  requires:
-  - name: musl
-    category: system
-    version: ">=0"
-  labels:
-    github.repo: "xorg-libxtrans"
-    autobump.string_replace: '{ "xtrans-": "" }'
-    github.owner: "freedesktop"
-  uri:
-  - https://github.com/freedesktop/xorg-macros/
-  - https://xorg.freedesktop.org/
-  license: "MIT"
-  base_url: "https://www.x.org/releases/individual/lib/"
-  extension: "tar.bz2"
-  description: "X transport library"
+    version: "2.3.2"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+    uri:
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
+    extension: "tar.gz"
+    description: "X11 Input extension wire protocol"
+  - name: xcb-proto
+    category: X
+    version: "1.14.1"
+    build_requires:
+      - category: "X"
+        name: "xtrans"
+        version: ">=0"
+      - category: "X"
+        name: "xproto"
+        version: ">=0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xcb-proto"
+      github.owner: "ch11ng"
+    uri:
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
+    extension: "tar.xz"
+    description: "XML-XCB protocol descriptions"
+  - name: xproto
+    category: X
+    build_requires:
+      - category: "development"
+        name: "toolchain"
+        version: ">=0"
+    version: "7.0.31"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    uri:
+      - https://github.com/freedesktop/xorg-xorgproto
+      - https://xorg.freedesktop.org/
+    license: "custom"
+    base_url: "https://xorg.freedesktop.org/archive/individual/proto/"
+    extension: "tar.bz2"
+    description: "X11 core wire protocol and auxiliary headers"
+  - name: xtrans
+    category: X
+    build_requires:
+      - category: "X"
+        name: "util-macros"
+        version: ">=0"
+    version: "1.4.0"
+    requires:
+      - name: musl
+        category: system
+        version: ">=0"
+    labels:
+      github.repo: "xorg-libxtrans"
+      autobump.string_replace: '{ "xtrans-": "" }'
+      github.owner: "freedesktop"
+    uri:
+      - https://github.com/freedesktop/xorg-macros/
+      - https://xorg.freedesktop.org/
+    license: "MIT"
+    base_url: "https://www.x.org/releases/individual/lib/"
+    extension: "tar.bz2"
+    description: "X transport library"
