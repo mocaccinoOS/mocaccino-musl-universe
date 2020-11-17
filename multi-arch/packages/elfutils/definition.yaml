@@ -1,0 +1,8 @@
+name: elfutils
+category: development
+version: "0.182"
+
+description: "Utilities and DSOs to handle ELF files and DWARF data"
+uri:
+- http://elfutils.org/
+license: "GPL-3.0-or-later and (GPL-2.0-or-later or LGPL-3.0-or-later)"

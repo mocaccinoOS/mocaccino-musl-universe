@@ -1,0 +1,8 @@
+name: gmp
+category: development
+version: "6.1.0"
+
+description: "A free library for arbitrary precision arithmetic"
+uri:
+- http://gmplib.org/
+license: "LGPL3"

@@ -1,0 +1,21 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+
+env:
+- CFLAGS="-I/include -I/usr/include -static"
+- LDFLAGS="-L/usr/lib -L/lib"
+package_dir: /{{.Values.name}}
+prelude:
+- |
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   mkdir -p /${PACKAGE_NAME} && \
+   luet install utils/curl libs/zlib development/m4 development/texinfo shells/bash development/make utils/ca-certificates libs/libressl && \
+   curl -L https://gmplib.org/download/${PACKAGE_NAME}/${PACKAGE_NAME}-${PACKAGE_VERSION}.tar.xz -o ${PACKAGE_NAME}-${PACKAGE_VERSION}.tar.xz && \
+   tar xvf ${PACKAGE_NAME}-${PACKAGE_VERSION}.tar.xz -C ./ && mv ${PACKAGE_NAME}-${PACKAGE_VERSION} ${PACKAGE_NAME}
+steps:
+- cd ${PACKAGE_NAME} && ./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --localstatedir=/var/state/gmp --enable-cxx --with-pic 
+- cd ${PACKAGE_NAME} && make -j8
+- cd ${PACKAGE_NAME} && make DESTDIR=/${PACKAGE_NAME} install
+- cd ${PACKAGE_NAME} && make install
