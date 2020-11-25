@@ -1,13 +1,13 @@
 name: bison
 category: development
-version: "3.7.3"
+version: "3.7.4"
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "bison"
   github.owner: "akimd"
 uri:
-- https://www.gnu.org/software/bison
+  - https://www.gnu.org/software/bison
 license: "GPL-2"
