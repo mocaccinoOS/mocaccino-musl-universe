@@ -1,0 +1,12 @@
+name: abuild
+category: development
+version: "3.7.0_rc1"
+
+uri:
+- https://github.com/alpinelinux/abuild
+license: "GPL-2"
+
+description: "Script to build Alpine Packages"
+labels:
+  github.repo: "abuild"
+  github.owner: "alpinelinux"
