@@ -1,0 +1,17 @@
+name: file
+category: utils
+version: "5.39"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+labels:
+  github.repo: "file"
+  autobump.string_replace: '{ "FILE": "" , "_": "."}'
+  github.owner: "file"
+uri:
+- "https://www.darwinsys.com/file"
+license: "BSD-2-Clause"
+
+description: "File type identification utility"
+archive_format: "tar.gz"

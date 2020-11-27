@@ -1,0 +1,20 @@
+name: acl
+category: development
+version: "2.2.53"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+- category: "development"
+  name: "attr"
+  version: ">=0"
+labels:
+  github.repo: "acl"
+  github.owner: "mirror"
+uri:
+- https://savannah.nongnu.org/projects/acl
+license: "GPL"
+
+description: "Access control list utilities"
+base_url: "https://download.savannah.nongnu.org/releases/"
+archive_format: "tar.gz"

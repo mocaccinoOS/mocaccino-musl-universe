@@ -1,0 +1,28 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+- category: "development"
+  name: "attr"
+  version: ">=0"
+package_dir: /{{.Values.name}}
+
+env:
+- CFLAGS="-I/include -I/usr/include -I/usr/include/attr/ -static"
+- CC="gcc"
+prelude:
+- | 
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install utils/autoconf utils/curl libs/zlib vcs/git development/automake development/pkg-config development/m4 \
+   development/make system/musl-toolchain && \
+   luet install libs/gettext-tools && \
+   curl -L {{.Values.base_url}}/{{.Values.name}}/{{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} -o {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} && \
+   tar -xvf {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} -C ./ && mv {{.Values.name}}-${PACKAGE_VERSION} ${PACKAGE_NAME} && \
+   mkdir -p /${PACKAGE_NAME}
+
+steps:
+- |
+   cd ${PACKAGE_NAME} && \
+   ./configure --prefix=/usr && \
+   make DESTDIR=/${PACKAGE_NAME} && \
+   make DESTDIR=/${PACKAGE_NAME} install && make install

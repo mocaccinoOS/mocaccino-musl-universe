@@ -1,0 +1,15 @@
+name: pax-utils
+category: development
+version: "1.2.6"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+
+uri:
+- https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
+license: "GPL-2.0-only"
+
+description: "Utility used to store, backup, and transport files"
+base_url: "https://dev.gentoo.org/~slyfox/distfiles/"
+archive_format: "tar.xz"
