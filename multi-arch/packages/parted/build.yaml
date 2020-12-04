@@ -18,6 +18,6 @@ prelude:
 steps:
 - |
    cd ${PACKAGE_NAME} && \
-   ./configure --prefix=/usr && \
+   ./configure --prefix=/usr --disable-device-mapper --without-readline && \
    make DESTDIR=/${PACKAGE_NAME} && \
    make DESTDIR=/${PACKAGE_NAME} install && make install
