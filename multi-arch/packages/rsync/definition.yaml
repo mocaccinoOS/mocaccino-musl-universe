@@ -1,0 +1,19 @@
+name: rsync
+category: utils
+version: "3.2.3"
+requires:
+- name: "util-linux"
+  category: "utils"
+  version: ">=0"
+- name: "musl-compat"
+  category: "system"
+  version: ">=0"
+labels:
+  github.repo: "rsync"
+  github.owner: "WayneD"
+description: "A file transfer program to keep remote files in sync"
+uri:
+  - http://samba.anu.edu.au/rsync/
+license: "GPL-3"
+archive_format: "tar.gz"
+base_url: "http://rsync.samba.org/ftp/"
