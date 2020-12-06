@@ -1,12 +1,8 @@
 requires:
-- category: "libs"
-  name: "skalibs"
+- category: "development"
+  name: "toolchain"
   version: ">=0"
 
-env:
-- CFLAGS="-I/include -I/usr/include -static"
-- LDFLAGS="-L/usr/lib/skalibs"
-- CC="gcc"
 
 package_dir: /k3s
 prelude:

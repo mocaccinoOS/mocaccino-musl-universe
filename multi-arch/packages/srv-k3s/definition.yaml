@@ -1,6 +1,6 @@
 name: k3s
 category: runit-srv
-version: "20200717+1"
+version: "20201206"
 requires:
 - name: e2fsprogs
   category: utils
