@@ -9,6 +9,7 @@ labels:
   github.repo: "file"
   autobump.string_replace: '{ "FILE": "" , "_": "."}'
   github.owner: "file"
+  autobump.version_contains: "FILE"
 uri:
 - "https://www.darwinsys.com/file"
 license: "BSD-2-Clause"
