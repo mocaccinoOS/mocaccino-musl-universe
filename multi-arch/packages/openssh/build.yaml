@@ -19,7 +19,9 @@ prelude:
 
 steps:
 - cd ${PACKAGE_NAME} && autoreconf
-- cd ${PACKAGE_NAME} && ./configure --prefix=/usr
+- cd ${PACKAGE_NAME} && ./configure --prefix=/usr --sysconfdir=/etc/ssh --libexecdir=/usr/lib/ssh --with-pid-dir=/run --disable-lastlog --disable-strip  --disable-wtmp --with-privsep-path=/var/empty
 - cd ${PACKAGE_NAME} && make -j8
 - cd ${PACKAGE_NAME} && make DESTDIR=/${PACKAGE_NAME} install-nokeys
 - cd ${PACKAGE_NAME} && make install-nokeys
+
+- mkdir -p ${PACKAGE_NAME}/var/empty

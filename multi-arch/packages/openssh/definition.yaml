@@ -1,9 +1,15 @@
 name: openssh
 category: utils
-version: "8.3+2"
+version: "8.3+3"
 requires:
 - name: libressl
   category: "libs"
+  version: ">=0"
+- name: zlib
+  category: "libs"
+  version: ">=0"
+- name: sshd
+  category: "entity"
   version: ">=0"
 uri:
 - https://www.openssh.com
