@@ -21,5 +21,6 @@ steps:
 - yq w -i $ENTITY_USER uid {{.Values.uid}}
 - yq w -i $ENTITY_USER gid {{.Values.gid}}
 - yq w -i ${ENTITY_USER} kind user
+- yq w -i ${ENTITY_USER} username /{{ .Values.name }}
 - yq w -i ${ENTITY_USER} password x
 - yq w -i $ENTITY_USER shell {{.Values.shell}}

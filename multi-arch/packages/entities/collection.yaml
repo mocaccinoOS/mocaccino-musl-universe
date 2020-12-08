@@ -1,7 +1,7 @@
 packages:
 - category: "entity"
   name: "sshd"
-  version: "0"
+  version: "1"
   group: true
   gid: 22
   uid: 22
