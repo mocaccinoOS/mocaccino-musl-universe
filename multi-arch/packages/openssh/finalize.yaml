@@ -1,0 +1,2 @@
+install:
+- ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa -b 521 || true
