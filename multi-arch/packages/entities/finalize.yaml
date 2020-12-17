@@ -1,3 +1,0 @@
-install:
-- entities apply -f /etc/group /etc/entities/{{ .Values.name }}/group.yaml || true
-- entities apply -f /etc/passwd /etc/entities/{{ .Values.name }}/user.yaml || true
