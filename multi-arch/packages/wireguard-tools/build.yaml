@@ -1,0 +1,24 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+
+env:
+- CFLAGS="-I/include -I/usr/include -static"
+- CC="gcc"
+
+package_dir: /{{.Values.name}}
+prelude:
+- |
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install shells/bash && \
+   luet uninstall utils/busybox-static && \
+   luet install vcs/git utils/coreutils development/make && \
+   ln -s /bin/bash /bin/sh && \
+   mkdir -p /${PACKAGE_NAME} && \
+   git clone https://git.zx2c4.com/wireguard-tools ${PACKAGE_NAME} && cd ${PACKAGE_NAME} && git checkout -b build v${PACKAGE_VERSION}
+
+steps:
+- cd ${PACKAGE_NAME}/src && make -j8
+- cd ${PACKAGE_NAME}/src && make DESTDIR=/${PACKAGE_NAME} WITH_WGQUICK=yes WITH_BASHCOMPLETION=yes WITH_SYSTEMDUNITS=no install
+- cd ${PACKAGE_NAME}/src && make WITH_WGQUICK=yes WITH_BASHCOMPLETION=yes WITH_SYSTEMDUNITS=no install
