@@ -10,7 +10,7 @@ requires:
   version: ">=0"
 
 env:
-- CFLAGS="-D_GNU_SOURCE -I/include -I/usr/include -static -fPIC"
+- CFLAGS="-D_GNU_SOURCE -I/include -I/usr/include -fPIC"
 - LDFLAGS="-L/usr/lib -L/lib"
 
 package_dir: /{{.Values.name}}
@@ -26,7 +26,7 @@ steps:
    cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && \
    ./configure --prefix=/usr --without-kernel --enable-devel --enable-libipq --enable-shared --sbindir=/sbin  && \
    sed -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool && \
-	 sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool && \
+   sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool && \
    make -j8  && \
    make DESTDIR=/${PACKAGE_NAME} install && \
    cp -rfv include "/${PACKAGE_NAME}"/usr
