@@ -1,6 +1,6 @@
 name: iptables
 category: networking
-version: "1.8.5"
+version: "1.8.5+1"
 
 uri:
 - https://www.netfilter.org/projects/iptables/
