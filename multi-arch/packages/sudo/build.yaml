@@ -1,0 +1,23 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+
+package_dir: /{{.Values.name}}
+prelude:
+- | 
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install shells/bash utils/autoconf utils/curl libs/zlib vcs/git development/automake development/pkg-config development/m4 \
+   development/make system/musl-toolchain && \
+   luet install libs/gettext-tools && \
+   curl -L https://www.sudo.ws/dist/sudo-${PACKAGE_VERSION}.tar.gz -o {{.Values.name}}-${PACKAGE_VERSION}.tar.gz && \
+   tar -xvf {{.Values.name}}-${PACKAGE_VERSION}.tar.gz -C ./ && mv {{.Values.name}}-${PACKAGE_VERSION} ${PACKAGE_NAME} && \
+   mkdir -p /${PACKAGE_NAME}
+
+steps:
+- |
+   cd ${PACKAGE_NAME} && \
+   ./configure --prefix=/usr --libexecdir=/usr/lib  --mandir=/usr/share/man --disable-nls --enable-pie --with-env-editor --with-mdoc \
+    --without-pam --without-skey --with-sendmail=/usr/sbin/sendmail --with-passprompt="[sudo] password for %p: " && \
+   make DESTDIR=/${PACKAGE_NAME} && \
+   make DESTDIR=/${PACKAGE_NAME} install && make install
