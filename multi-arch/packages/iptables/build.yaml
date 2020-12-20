@@ -25,6 +25,8 @@ steps:
    PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
    cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && \
    ./configure --prefix=/usr --without-kernel --enable-devel --enable-libipq --enable-shared --sbindir=/sbin  && \
+   sed -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool && \
+	 sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool && \
    make -j8  && \
    make DESTDIR=/${PACKAGE_NAME} install && \
    cp -rfv include "/${PACKAGE_NAME}"/usr
