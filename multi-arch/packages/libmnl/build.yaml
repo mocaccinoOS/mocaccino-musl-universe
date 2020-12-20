@@ -5,7 +5,7 @@ requires:
 
 
 env:
-- CFLAGS="-D_GNU_SOURCE -I/include -I/usr/include -static"
+- CFLAGS="-D_GNU_SOURCE -I/include -I/usr/include -fPIC"
 - LDFLAGS="-L/usr/lib -L/lib"
 
 package_dir: /{{.Values.name}}
@@ -16,7 +16,9 @@ prelude:
    mkdir -p /${PACKAGE_NAME} && mkdir ${PACKAGE_NAME} && \
    wget https://www.netfilter.org/pub/${PACKAGE_NAME}/${PACKAGE_NAME}-${PACKAGE_VERSION}.tar.bz2 -O ${PACKAGE_NAME}.tar.bz2 && tar -xvf ${PACKAGE_NAME}.tar.bz2 -C ./ && mv ${PACKAGE_NAME}-$PACKAGE_VERSION ${PACKAGE_NAME}
 steps:
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION  && ./configure --prefix=/usr --enable-static
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && make -j8
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && make DESTDIR=/${PACKAGE_NAME} install
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && make install
+- |
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION  && ./configure --prefix=/usr  && \
+   make -j8  && \
+   make DESTDIR=/${PACKAGE_NAME} install && \
+   make install
