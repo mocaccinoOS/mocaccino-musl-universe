@@ -21,7 +21,10 @@ prelude:
    mkdir -p /${PACKAGE_NAME} && mkdir ${PACKAGE_NAME} && \
    wget https://www.netfilter.org/projects/iptables/files/iptables-${PACKAGE_VERSION}.tar.bz2 -O iptables.tar.bz2 && tar -xvf iptables.tar.bz2 -C ./ && mv iptables-$PACKAGE_VERSION ${PACKAGE_NAME}
 steps:
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && ./configure --prefix=/usr --without-kernel --enable-devel --enable-libipq --enable-shared --sbindir=/sbin
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && make -j8
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && make DESTDIR=/${PACKAGE_NAME} install
-- cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && cp -rfv include "/${PACKAGE_NAME}"/usr
+- |
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   cd ${PACKAGE_NAME}/${PACKAGE_NAME}-$PACKAGE_VERSION && \
+   ./configure --prefix=/usr --without-kernel --enable-devel --enable-libipq --enable-shared --sbindir=/sbin  && \
+   make -j8  && \
+   make DESTDIR=/${PACKAGE_NAME} install && \
+   cp -rfv include "/${PACKAGE_NAME}"/usr
