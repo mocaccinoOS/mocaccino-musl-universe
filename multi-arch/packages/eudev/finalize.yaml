@@ -1,2 +1,2 @@
 install:
-- /usr/bin/udevadm hwdb --update
+- /usr/sbin/udevadm hwdb --update
