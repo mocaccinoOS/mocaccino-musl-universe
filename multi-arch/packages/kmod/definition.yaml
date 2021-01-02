@@ -1,9 +1,12 @@
 name: kmod
 category: system
-version: "27+1"
+version: "27+2"
 requires:
 - name: "zlib"
   category: "libs"
+  version: ">=0"
+- category: "libs"
+  name: "libxslt"
   version: ">=0"
 
 labels:

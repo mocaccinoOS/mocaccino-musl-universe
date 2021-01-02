@@ -7,8 +7,8 @@ requires:
   version: ">=0"
 
 env:
-- CFLAGS="-g -O2 -I/include -I/usr/include -static"
-- CPPFLAGS="-I/include -I/usr/include -static"
+- CFLAGS="-g -O2 -I/include -I/usr/include"
+- CPPFLAGS="-I/include -I/usr/include"
 
 package_dir: /kmod
 prelude:
