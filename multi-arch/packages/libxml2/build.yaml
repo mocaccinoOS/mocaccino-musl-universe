@@ -5,7 +5,7 @@ requires:
 
 env:
 - CFLAGS="-I/include -I/usr/include -static"
-- LUET_PACKAGES="utils/autoconf vcs/git development/make development/automake development/m4 development/pkg-config development/libtool lang/python system/musl-compat"
+- LUET_PACKAGES="development/patch utils/autoconf vcs/git development/make development/automake development/m4 development/pkg-config development/libtool lang/python system/musl-compat"
 
 package_dir: /libxml2
 prelude:
@@ -13,7 +13,8 @@ prelude:
    PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
    luet install ${LUET_PACKAGES} && \
    mkdir -p /${PACKAGE_NAME} && \
-   git clone https://github.com/GNOME/${PACKAGE_NAME} && cd ${PACKAGE_NAME} && git checkout -b build v${PACKAGE_VERSION}
+   git clone https://github.com/GNOME/${PACKAGE_NAME} && cd ${PACKAGE_NAME} && git checkout -b build v${PACKAGE_VERSION} && \
+   patch -p1 < ../python3.9.patch
 
 steps:
 - cd ${PACKAGE_NAME} && ./autogen.sh
