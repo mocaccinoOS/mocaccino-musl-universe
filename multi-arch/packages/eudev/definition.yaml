@@ -13,6 +13,9 @@ requires:
 - name: xz
   category: utils
   version: ">=0"
+- name: util-linux
+  category: utils
+  version: ">=0"
 uri:
 - https://github.com/gentoo/eudev
 license: "LGPL-2.1 MIT GPL-2"
