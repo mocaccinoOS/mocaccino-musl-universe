@@ -8,6 +8,9 @@ requires:
 - category: "libs"
   name: "libxslt"
   version: ">=0"
+- category: "libs"
+  name: "libressl"
+  version: ">=0"
 
 labels:
   github.repo: "kmod"
