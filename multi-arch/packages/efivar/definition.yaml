@@ -1,0 +1,16 @@
+name: efivar
+category: utils
+version: "37+1"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+labels:
+  github.repo: "efivar"
+  github.owner: "rhboot"
+uri:
+  - https://github.com/rhboot/efivar
+license: "LGPL-2.1"
+
+description: "Tools and library to manipulate EFI variables"
+archive_format: "tar.bz2"

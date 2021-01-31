@@ -1,0 +1,31 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+- name: popt
+  category: libs
+  version: ">=0"
+- name: linux-headers
+  category: development
+  version: ">=0"
+env:
+- libdir=/usr/lib
+- CFLAGS="-fPIC"
+- LDFLAGS="-fPIC"
+- CPPFLAGS="-fPIC"
+package_dir: /{{.Values.name}}
+prelude:
+- | 
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install utils/autoconf utils/curl libs/zlib vcs/git development/automake development/patch development/pkg-config development/libtool development/m4 \
+   development/make system/musl-toolchain && \
+   luet install libs/gettext-tools && \
+   curl -L https://github.com/rhboot/efivar/releases/download/${PACKAGE_VERSION}/efivar-${PACKAGE_VERSION}.{{.Values.archive_format}} -o {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} && \
+   tar -xvf {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} -C ./ && mv {{.Values.name}}-${PACKAGE_VERSION/./_} ${PACKAGE_NAME} && \
+   mkdir -p /${PACKAGE_NAME} && cd ${PACKAGE_NAME} && patch -p1 < ../efivar-fix-format_guid.patch && patch -p1 < ../efivar-fix-packed.patch
+
+steps:
+- |
+   cd ${PACKAGE_NAME} && \
+   make CCLD=gcc CC=gcc DESTDIR=/${PACKAGE_NAME} && \
+   make CCLD=gcc CC=gcc DESTDIR=/${PACKAGE_NAME} install && make install
