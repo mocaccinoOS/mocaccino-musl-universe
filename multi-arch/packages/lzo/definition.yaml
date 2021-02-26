@@ -1,0 +1,14 @@
+name: lzo
+category: libs
+version: "2.10"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+
+description: "LZO -- a real-time data compression library"
+uri:
+  - "http://www.oberhumer.com/opensource/lzo"
+license: "GPL"
+archive_format: "tar.gz"
+base_url: "http://www.oberhumer.com/opensource/lzo/download/"

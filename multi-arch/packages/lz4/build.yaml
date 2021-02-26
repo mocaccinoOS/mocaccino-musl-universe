@@ -1,0 +1,28 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+
+- category: "utils"
+  name: "xz"
+  version: ">=0"
+env:
+- CFLAGS="-D_GNU_SOURCE -I/include -I/usr/include -fPIC"
+- LDFLAGS="-L/usr/lib -L/lib"
+- PREFIX="/usr"
+- CC=gcc
+package_dir: /{{.Values.name}}
+prelude:
+- |
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install utils/autoconf development/make development/automake vcs/git development/m4 libs/libressl && \
+   mkdir -p /${PACKAGE_NAME} && mkdir ${PACKAGE_NAME} && \
+   curl -L https://github.com/Cyan4973/lz4/archive/r${PACKAGE_VERSION}.tar.gz -o ${PACKAGE_NAME}.tar.gz && \
+   tar -xvf ${PACKAGE_NAME}.tar.gz -C ./ && mv ${PACKAGE_NAME}-r$PACKAGE_VERSION ${PACKAGE_NAME}
+steps:
+- |
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   cd ${PACKAGE_NAME}/${PACKAGE_NAME}-r$PACKAGE_VERSION && \
+   make -j8  && \
+   make DESTDIR=/${PACKAGE_NAME} install && \
+   make install
