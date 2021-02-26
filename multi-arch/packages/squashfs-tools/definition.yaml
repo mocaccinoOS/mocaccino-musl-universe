@@ -11,6 +11,9 @@ labels:
 uri:
   - https://github.com/plougher/squashfs-tools
 license: "GPL-2.0"
-
+requires:
+- category: "libs"
+  name: "lz4"  
+  version: ">=0"
 description: "Tools for squashfs, a highly compressed read-only filesystem for Linux"
 archive_format: "tar.gz"
