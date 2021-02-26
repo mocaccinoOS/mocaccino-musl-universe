@@ -1,0 +1,16 @@
+name: squashfs-tools
+category: utils
+version: "4.4"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+labels:
+  github.repo: "squashfs-tools"
+  github.owner: "plougher"
+uri:
+  - https://github.com/plougher/squashfs-tools
+license: "GPL-2.0"
+
+description: "Tools for squashfs, a highly compressed read-only filesystem for Linux"
+archive_format: "tar.gz"

@@ -1,0 +1,33 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+- category: "libs"
+  name: "lz4"  
+  version: ">=0"
+- category: "libs"
+  name: "lzo"  
+  version: ">=0"
+env:
+- libdir=/usr/lib
+- CFLAGS="-std=gnu89 -fPIC -I/usr/include"
+- LDFLAGS="-fPIC"
+- CPPFLAGS="-fPIC"
+package_dir: /{{.Values.name}}
+prelude:
+- | 
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install utils/autoconf utils/curl libs/zlib vcs/git development/automake development/patch development/pkg-config development/libtool development/m4 \
+   development/make system/musl-toolchain && \
+   luet install libs/gettext-tools && \
+   curl -L https://github.com/plougher/squashfs-tools/archive/${PACKAGE_VERSION}.{{.Values.archive_format}} -o {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} && \
+   tar -xvf {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} -C ./ && mv {{.Values.name}}-${PACKAGE_VERSION} ${PACKAGE_NAME} && \
+   mkdir -p /${PACKAGE_NAME}
+
+steps:
+- |
+   cd ${PACKAGE_NAME}/squashfs-tools && \
+   mkdir -p /$PACKAGE_NAME/sbin && \
+   make CC=gcc XZ_SUPPORT=1 LZO_SUPPORT=1 LZ4_SUPPORT=1 DESTDIR=/${PACKAGE_NAME} && \
+   cp -a mksquashfs unsquashfs /$PACKAGE_NAME/sbin && \
+   cp -a mksquashfs unsquashfs /sbin
