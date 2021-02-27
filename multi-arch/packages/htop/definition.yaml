@@ -14,3 +14,8 @@ uri:
   - "https://htop.dev/"
 license: "GPL-2.0-or-later"
 archive_format: "tar.gz"
+
+
+labels:
+  github.repo: "htop"
+  github.owner: "htop-dev"
