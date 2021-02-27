@@ -1,0 +1,13 @@
+name: libarchive
+category: utils
+version: "3.5.1"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+
+description: "library that can create and read several streaming archive formats"
+uri:
+  - "https://libarchive.org/"
+license: "BSD-2-Clause AND BSD-3-Clause AND Public-Domain"
+archive_format: "tar.xz"
