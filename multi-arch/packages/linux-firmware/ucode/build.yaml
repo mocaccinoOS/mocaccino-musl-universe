@@ -1,0 +1,20 @@
+requires:
+- category: "kernel"
+  name: "linux-firmware"
+  version: ">=0"
+- category: "utils"
+  name: "libarchive"
+  version: ">=0"
+env:
+- CFLAGS="-I/include -I/usr/include -static -fPIC"
+- CPPFLAGS="-I/include -I/usr/include -static -fPIC"
+- FIRMWAREDIR="/lib/firmware"
+package_dir: /{{.Values.name}}
+steps:
+- | 
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   mkdir -p /luetbuild/kernel/x86/microcode && \
+   cat /lib/firmware/amd-ucode/microcode_amd*.bin > /luetbuild/kernel/x86/microcode/AuthenticAMD.bin && \
+   mkdir -p /${PACKAGE_NAME}/boot && \
+   cd /luetbuild && echo kernel/x86/microcode/AuthenticAMD.bin | \
+   bsdtar --uid 0 --gid 0 -cnf - -T - | bsdtar --null -cf - --format=newc @- > /{{.Values.name}}/boot/amd-ucode.img
