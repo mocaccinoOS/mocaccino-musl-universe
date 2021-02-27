@@ -10,5 +10,12 @@ description: "linux-firmware ucode"
 uri:
   - "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
 license: "custom:multiple"
-
-# TODO: Split microcode
+labels:
+  autobump.revdeps: "false"
+  autobump.string_replace: '{ "prefix": "" }'
+  autobump.strategy: "custom"
+  autobump.prefix: "prefix"
+  autobump.hook: |
+    eval "$(curl -L -s https://git.alpinelinux.org/aports/plain/main/linux-firmware/APKBUILD)" && echo $pkgver
+  autobump.version_hook: |
+    eval "$(curl -L -s https://git.alpinelinux.org/aports/plain/main/linux-firmware/APKBUILD)" && echo $pkgver
