@@ -1,0 +1,16 @@
+name: htop
+category: utils
+version: "3.0.5"
+requires:
+- name: musl
+  category: system
+  version: ">=0"
+- category: "libs"
+  name: "ncurses"
+  version: ">=0"
+
+description: "Interactive process viewer"
+uri:
+  - "https://htop.dev/"
+license: "GPL-2.0-or-later"
+archive_format: "tar.gz"
