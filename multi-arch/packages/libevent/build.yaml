@@ -1,0 +1,25 @@
+requires:
+- category: "development"
+  name: "toolchain"
+  version: ">=0"
+env:
+- CFLAGS="-I/include -I/usr/include -static -fPIC"
+- CPPFLAGS="-I/include -I/usr/include -static -fPIC"
+
+package_dir: /{{.Values.name}}
+prelude:
+- | 
+   PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
+   luet install libs/libressl utils/autoconf utils/curl lang/python libs/zlib vcs/git development/automake development/pkg-config development/m4 \
+   development/make system/musl-toolchain && \
+   curl -L https://github.com/libevent/libevent/releases/download/release-${PACKAGE_VERSION}-stable/libevent-${PACKAGE_VERSION}-stable.{{.Values.archive_format}} -o {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} && \
+   tar -xvf {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} -C ./ && mv {{.Values.name}}-${PACKAGE_VERSION}-stable ${PACKAGE_NAME} && \
+   mkdir -p /${PACKAGE_NAME}
+steps:
+- |
+   cd ${PACKAGE_NAME} && \
+   ./configure \
+    --sysconfdir=/etc \
+    --prefix=/usr  && \
+   make DESTDIR=/${PACKAGE_NAME} && \
+   make DESTDIR=/${PACKAGE_NAME} install && make install
