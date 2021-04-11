@@ -1,18 +1,17 @@
 name: file
 category: utils
-version: "5.39"
+version: "5.40"
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "file"
   autobump.string_replace: '{ "FILE": "" , "_": "."}'
   github.owner: "file"
   autobump.version_contains: "FILE"
 uri:
-- "https://www.darwinsys.com/file"
+  - "https://www.darwinsys.com/file"
 license: "BSD-2-Clause"
-
 description: "File type identification utility"
 archive_format: "tar.gz"
