@@ -1,6 +1,6 @@
 name: bison
 category: development
-version: "3.7.5"
+version: "3.7.6"
 requires:
   - name: musl
     category: system
