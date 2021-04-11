@@ -1,11 +1,10 @@
 name: linux-firmware
 category: kernel
-version: "20210208"
+version: "20210315"
 requires:
-- name: musl
-  category: system
-  version: ">=0"
-
+  - name: musl
+    category: system
+    version: ">=0"
 description: "firmware files for linux"
 uri:
   - "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
@@ -20,3 +19,4 @@ labels:
     eval "$(curl -L -s https://git.alpinelinux.org/aports/plain/main/linux-firmware/APKBUILD)" && echo $pkgver
   autobump.version_hook: |
     eval "$(curl -L -s https://git.alpinelinux.org/aports/plain/main/linux-firmware/APKBUILD)" && echo $pkgver
+  package.version: "20210315"
