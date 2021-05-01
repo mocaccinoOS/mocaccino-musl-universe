@@ -1,8 +1,7 @@
 name: jpeg
 category: libs
-version: "9.1+1"
-
+version: 9.1+2
 uri:
-- http://ijg.org
-- https://jpegclub.org/reference
+  - http://ijg.org
+  - https://jpegclub.org/reference
 license: "AS IS"
