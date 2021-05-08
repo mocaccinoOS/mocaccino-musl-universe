@@ -1,17 +1,16 @@
 name: xz
 category: utils
-version: "5.2.5"
+version: 5.2.5+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "xz"
   github.owner: "xz-mirror"
 uri:
   - https://tukaani.org/xz/
 license: "GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later"
-
 description: "Library and CLI tools for XZ and LZMA compressed files"
 base_url: "https://tukaani.org/"
 archive_format: "tar.xz"
