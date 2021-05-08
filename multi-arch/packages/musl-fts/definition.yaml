@@ -1,11 +1,10 @@
 name: musl-fts
 category: libs
-version: "1.2.7+2"
+version: 1.2.7+3
 requires:
-- name: "zlib"
-  category: "libs"
-  version: ">=0"
-
+  - name: "zlib"
+    category: "libs"
+    version: ">=0"
 labels:
   github.repo: "musl-fts"
   github.owner: "void-linux"
