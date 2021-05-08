@@ -1,21 +1,19 @@
 name: kmod
 category: system
-version: "27+4"
+version: 27+5
 requires:
-- name: "zlib"
-  category: "libs"
-  version: ">=0"
-- category: "libs"
-  name: "libxslt"
-  version: ">=0"
-- category: "libs"
-  name: "libressl"
-  version: ">=0"
-
+  - name: "zlib"
+    category: "libs"
+    version: ">=0"
+  - category: "libs"
+    name: "libxslt"
+    version: ">=0"
+  - category: "libs"
+    name: "libressl"
+    version: ">=0"
 labels:
   github.repo: "kmod"
   github.owner: "lucasdemarchi"
-
 uri:
-- https://git.kernel.org/?p
+  - https://git.kernel.org/?p
 license: "LGPL-2"
