@@ -1,11 +1,9 @@
 name: libxml2
 category: libs
-version: "2.9.10+2"
-
+version: 2.9.10+3
 labels:
   github.repo: "libxml2"
   github.owner: "GNOME"
-
 uri:
-- http://www.xmlsoft.org
+  - http://www.xmlsoft.org
 license: "MIT"
