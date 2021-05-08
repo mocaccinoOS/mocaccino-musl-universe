@@ -1,13 +1,13 @@
 name: rsync
 category: utils
-version: "3.2.3"
+version: 3.2.3+1
 requires:
-- name: "util-linux"
-  category: "utils"
-  version: ">=0"
-- name: "musl-compat"
-  category: "system"
-  version: ">=0"
+  - name: "util-linux"
+    category: "utils"
+    version: ">=0"
+  - name: "musl-compat"
+    category: "system"
+    version: ">=0"
 labels:
   github.repo: "rsync"
   github.owner: "WayneD"
