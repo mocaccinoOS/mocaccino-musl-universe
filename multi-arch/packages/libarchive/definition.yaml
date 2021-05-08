@@ -1,15 +1,13 @@
 name: libarchive
 category: utils
-version: "3.5.1"
+version: 3.5.1+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
-
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "libarchive"
   github.owner: "libarchive"
-
 description: "library that can create and read several streaming archive formats"
 uri:
   - "https://libarchive.org/"
