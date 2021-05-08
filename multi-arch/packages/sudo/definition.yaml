@@ -1,12 +1,11 @@
 name: sudo
 category: utils
-version: "1.9.4"
+version: 1.9.4+1
 requires:
-- name: zlib
-  category: libs
-  version: ">=0"
+  - name: zlib
+    category: libs
+    version: ">=0"
 uri:
   - https://www.sudo.ws/sudo/
 license: "custom ISC"
-
 description: "Give certain users the ability to run some commands as root"
