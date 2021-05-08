@@ -1,6 +1,6 @@
 name: file
 category: utils
-version: "5.40"
+version: 5.40+1
 requires:
   - name: musl
     category: system

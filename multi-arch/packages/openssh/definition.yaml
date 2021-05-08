@@ -1,16 +1,16 @@
 name: openssh
 category: utils
-version: "8.3+3"
+version: 8.3+4
 requires:
-- name: libressl
-  category: "libs"
-  version: ">=0"
-- name: zlib
-  category: "libs"
-  version: ">=0"
-- name: sshd
-  category: "entity"
-  version: ">=0"
+  - name: libressl
+    category: "libs"
+    version: ">=0"
+  - name: zlib
+    category: "libs"
+    version: ">=0"
+  - name: sshd
+    category: "entity"
+    version: ">=0"
 uri:
-- https://www.openssh.com
+  - https://www.openssh.com
 license: "BSD GPL-2"

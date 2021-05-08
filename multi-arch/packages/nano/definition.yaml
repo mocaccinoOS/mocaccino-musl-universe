@@ -1,12 +1,11 @@
 name: nano
 category: editors
-version: "2.5.0"
+version: 2.5.0+1
 requires:
-- name: ncurses
-  category: libs
-  version: ">=0"
+  - name: ncurses
+    category: libs
+    version: ">=0"
 uri:
   - http://www.nano-editor.org/
 license: "GPL"
-
 description: "Text Editor. GNU nano is designed to be a free replacement for the Pico text editor."

@@ -1,9 +1,9 @@
 name: lz4
 category: libs
-version: "131"
+version: 131+1
 description: LZ4 is lossless compression algorithm with fast decoder @ multiple GB/s per core.
 uri:
-- http://www.lz4.info
+  - http://www.lz4.info
 license: "BSD / GPLv2"
 labels:
   github.repo: "lz4"

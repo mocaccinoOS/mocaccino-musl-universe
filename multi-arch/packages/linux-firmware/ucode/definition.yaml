@@ -1,6 +1,6 @@
 name: linux-firmware-ucode
 category: kernel
-version: "20210315"
+version: 20210315+1
 requires:
   - name: musl
     category: system

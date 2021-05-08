@@ -1,16 +1,15 @@
 name: efibootmgr
 category: utils
-version: "17"
+version: 17+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "efibootmgr"
   github.owner: "rhboot"
 uri:
   - https://github.com/rhboot/efibootmgr
 license: "GPL-2.0"
-
 description: "Linux user-space application to modify the Intel Extensible Firmware Interface"
 archive_format: "tar.gz"

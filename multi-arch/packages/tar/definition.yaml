@@ -1,20 +1,19 @@
 name: tar
 category: utils
-version: "1.32"
+version: 1.32+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
-- name: acl
-  category: development
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
+  - name: acl
+    category: development
+    version: ">=0"
 labels:
   github.repo: "tar"
   github.owner: "mirror"
 uri:
-- http://www.gnu.org/software/tar
+  - http://www.gnu.org/software/tar
 license: "GPL"
-
 description: "Utility used to store, backup, and transport files"
 base_url: "https://ftp.gnu.org/gnu"
 archive_format: "tar.xz"

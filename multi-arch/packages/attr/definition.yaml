@@ -1,17 +1,16 @@
 name: attr
 category: development
-version: "2.4.48"
+version: 2.4.48+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "attr"
   github.owner: "mirror"
 uri:
-- https://savannah.nongnu.org/projects/attr
+  - https://savannah.nongnu.org/projects/attr
 license: "GPL"
-
 description: "Utilities for managing filesystem extended attributes"
 base_url: "https://download.savannah.nongnu.org/releases/"
 archive_format: "tar.gz"

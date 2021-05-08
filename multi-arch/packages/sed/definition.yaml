@@ -1,15 +1,14 @@
 name: sed
 category: utils
-version: "4.8"
+version: 4.8+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "sed"
   github.owner: "mirror"
 uri:
-- http://www.gnu.org/software/sed
+  - http://www.gnu.org/software/sed
 license: "GPL"
-
 description: "non-interactive command-line text editor"
