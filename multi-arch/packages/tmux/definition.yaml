@@ -1,22 +1,18 @@
 name: tmux
 category: utils
-version: "3.1c"
+version: 3.1c+1
 requires:
-- name: musl
-  category: system
-  version: ">=0"
-- category: "libs"
-  name: "ncurses"
-  version: ">=0"
-
-
+  - name: musl
+    category: system
+    version: ">=0"
+  - category: "libs"
+    name: "ncurses"
+    version: ">=0"
 description: "Tool to control multiple terminals from a single terminal"
 uri:
   - "https://tmux.github.io/"
 license: "ISC"
 archive_format: "tar.gz"
-
-
 labels:
   github.repo: "tmux"
   github.owner: "tmux"
