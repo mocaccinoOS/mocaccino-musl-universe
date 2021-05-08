@@ -1,8 +1,7 @@
 name: linux-headers
 category: development
-version: "5.7.8"
+version: 5.7.8+1
 description: "Linux system headers"
 license: "GPL-2.0-only"
 arch: "x86_64"
-
 archive_format: tar.xz
