@@ -1,17 +1,16 @@
 name: parted
 category: utils
-version: "3.3+1"
+version: 3.3+2
 requires:
-- name: musl
-  category: system
-  version: ">=0"
+  - name: musl
+    category: system
+    version: ">=0"
 labels:
   github.repo: "parted"
   github.owner: "mirror"
 uri:
-- http://www.gnu.org/software/parted
+  - http://www.gnu.org/software/parted
 license: "GPL"
-
 description: "Utility to create, destroy, resize, check and copy partitions"
 base_url: "https://ftp.gnu.org/gnu"
 archive_format: "tar.xz"
