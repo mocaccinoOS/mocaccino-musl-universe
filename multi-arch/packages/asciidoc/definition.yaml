@@ -1,6 +1,6 @@
 name: asciidoc
 category: utils
-version: 9.0.2+5
+version: 9.0.2+4
 requires:
   - name: "python"
     category: "lang"
