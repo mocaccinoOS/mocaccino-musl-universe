@@ -10,7 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DOCKER_CFG: ${{ secrets.DOCKER_HOST }}
       ENCODED_KUBECONFIG: ${{ secrets.KUBECONFIG }}
       MINIO_API_URL: ${{ secrets.MINIO_API_URL }}
       MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -20,7 +19,7 @@ jobs:
       NAMESPACE: workload-mocaccino-musl-universe
       TREE_DIR: "amd64 multi-arch"
       DOCKER_REGISTRY: quay.io
-      BACKEND: docker
+      BACKEND: docker-sidecar
       DOCKER_USER: ${{ secrets.QUAY_USERNAME }}
       DOCKER_PASS: ${{ secrets.QUAY_PASSWORD }}
     steps:
@@ -40,7 +39,7 @@ jobs:
         export GITHUB_REPO=$GITHUB_REPOSITORY
         echo "$ENCODED_KUBECONFIG" | base64 -d > $KUBECONFIG
         kubectl create namespace $NAMESPACE || true
-        DOCKER_HOST=$DOCKER_CFG luet k8s-build-scheduler
+        luet k8s-build-scheduler
     - name: Create repository 🔧
       run: |
         BUILD_PHASE=false CREATE_PHASE=true luet k8s-build-scheduler
