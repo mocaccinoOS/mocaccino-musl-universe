@@ -1,6 +1,6 @@
 name: grub2
 category: utils
-version: 2.04+6
+version: 2.04+7
 labels:
   github.repo: "grub2"
   github.owner: "rhboot"
