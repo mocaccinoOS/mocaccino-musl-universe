@@ -10,7 +10,7 @@ prelude:
 - | 
    PACKAGE_VERSION=${PACKAGE_VERSION%\+*}  && \
    set -x && \
-   luet install utils/autoconf utils/curl libs/zlib vcs/git development/automake development/patch development/pkg-config development/libtool development/m4 lang/perl \
+   luet install --force utils/autoconf utils/curl libs/zlib vcs/git development/automake development/patch development/pkg-config development/libtool development/m4 lang/perl \
    development/make system/musl-toolchain && \
    luet install libs/gettext-tools && \
    curl -L https://cdn.kernel.org/pub/linux/kernel/v${PACKAGE_VERSION:0:1}.x/linux-${PACKAGE_VERSION}.{{.Values.archive_format}} -o {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.archive_format}} && \
