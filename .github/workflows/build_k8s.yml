@@ -46,7 +46,6 @@ jobs:
         build: true
         onlyMissing: true
         FINAL_REPO: quay.io/mocaccino/musl-universe
-        values: arches/amd64/values.yaml
         pushCache: false
         CURRENT_PACKAGE:  ${{ matrix.category }}/${{ matrix.name }}@${{ matrix.version }}
     - name: Build 🔧
@@ -57,7 +56,6 @@ jobs:
         build: true
         FINAL_REPO: quay.io/mocaccino/musl-universe
         onlyMissing: true
-        values: arches/amd64/values.yaml
         pushCache: true
         DOCKER_USERNAME: ${{ secrets.QUAY_ROBOT_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.QUAY_ROBOT_PASSWORD }}
