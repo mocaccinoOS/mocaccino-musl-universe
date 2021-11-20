@@ -20,7 +20,7 @@ steps:
 - |
    cd ${PACKAGE_NAME} && mkdir build && cd build && \ 
    ../configure && make  && \
-   luet install --nodeps utils/coreutils && \
+   luet install --nodeps --force utils/coreutils && \
    make -j1 MKDIR_P="/usr/bin/install -d" DESTDIR=/${PACKAGE_NAME} install && \
    mv /${PACKAGE_NAME}/sbin/* /${PACKAGE_NAME}/usr/sbin/ && \
    mv /${PACKAGE_NAME}/usr/sbin/e2fsck /${PACKAGE_NAME}/sbin/ && \
