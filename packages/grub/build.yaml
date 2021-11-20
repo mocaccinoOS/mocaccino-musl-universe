@@ -15,7 +15,7 @@ prelude:
 - |
    PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
    mkdir -p /${PACKAGE_NAME} && \
-   luet install utils/util-linux utils/curl libs/zlib  vcs/git libs/gettext-tools lang/python && \
+   luet install --force utils/util-linux utils/curl libs/zlib  vcs/git libs/gettext-tools lang/python && \
    curl -L  https://ftp.gnu.org/gnu/grub/grub-${PACKAGE_VERSION}.tar.xz -o grub-${PACKAGE_VERSION}.tar.xz && \
    tar -xvf grub-${PACKAGE_VERSION}.tar.xz -C ./ && mv grub-${PACKAGE_VERSION} ${PACKAGE_NAME}
   
