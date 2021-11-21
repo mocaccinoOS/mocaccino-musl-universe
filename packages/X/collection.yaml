@@ -385,7 +385,7 @@ packages:
     description: "X11 various extension wire protocol"
     base_url: "http://xorg.freedesktop.org/releases/individual/lib/"
     extension: "tar.bz2"
-  - name: libxdmcp
+  - name: libXdmcp
     category: X
     build_requires:
       - category: "X"
