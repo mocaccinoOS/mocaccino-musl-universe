@@ -7,7 +7,7 @@ package_dir: /{{.Values.name}}
 prelude:
 - | 
    PACKAGE_VERSION=${PACKAGE_VERSION%\+*} && \
-   luet install libs/zlib utils/autoconf utils/curl libs/zlib vcs/git development/automake development/pkg-config development/m4 lang/python \
+   luet install --force libs/zlib utils/autoconf utils/curl libs/zlib vcs/git development/automake development/pkg-config development/m4 lang/python \
    development/make system/musl-toolchain && \
    curl -L {{.Values.base_url}}{{.Values.name}}-$PACKAGE_VERSION.{{.Values.extension}} -o {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.extension}} && \
    tar -xvf {{.Values.name}}-${PACKAGE_VERSION}.{{.Values.extension}} -C ./ && mv {{.Values.name}}-${PACKAGE_VERSION} ${PACKAGE_NAME} && \
