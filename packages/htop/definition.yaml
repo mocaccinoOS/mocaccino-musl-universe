@@ -1,6 +1,6 @@
 name: htop
 category: utils
-version: 3.0.5+1
+version: "3.1.1"
 requires:
   - name: musl
     category: system
