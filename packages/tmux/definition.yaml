@@ -1,6 +1,6 @@
 name: tmux
 category: utils
-version: 3.1c+1
+version: 3.1c+2
 requires:
   - name: musl
     category: system
