@@ -1,5 +1,5 @@
 name: vim
-version: "8.2.2860"
+version: 8.2.2860+1
 category: editors
 requires:
   - name: ncurses
