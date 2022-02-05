@@ -1,6 +1,6 @@
 name: "lowdown"
 category: init
-version: 0.7.1+4
+version: 0.7.1+5
 uri:
   - https://kristaps.bsd.lv/lowdown
 license: "ISC"
