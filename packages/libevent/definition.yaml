@@ -1,6 +1,6 @@
 name: libevent
 category: libs
-version: 2.1.12+1
+version: "release-2.1.12-stable"
 requires:
   - name: musl
     category: system
