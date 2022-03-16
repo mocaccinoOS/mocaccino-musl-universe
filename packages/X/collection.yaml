@@ -175,7 +175,7 @@ packages:
     extension: "tar.bz2"
   - name: libXrender
     category: X
-    version: "0.9.10"
+    version: 0.9.10+1
     build_requires:
       - category: "X"
         name: "util-macros"
