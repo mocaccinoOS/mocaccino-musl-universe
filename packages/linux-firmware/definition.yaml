@@ -1,6 +1,6 @@
 name: linux-firmware
 category: kernel
-version: 20210315+2
+version: "20220209"
 requires:
   - name: musl
     category: system
@@ -19,4 +19,4 @@ labels:
     eval "$(curl -L -s https://git.alpinelinux.org/aports/plain/main/linux-firmware/APKBUILD)" && echo $pkgver
   autobump.version_hook: |
     eval "$(curl -L -s https://git.alpinelinux.org/aports/plain/main/linux-firmware/APKBUILD)" && echo $pkgver
-  package.version: "20210315"
+  package.version: "20220209"
