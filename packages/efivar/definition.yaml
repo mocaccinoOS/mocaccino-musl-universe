@@ -1,6 +1,6 @@
 name: efivar
 category: utils
-version: 37+2
+version: "efivar-0.14"
 requires:
   - name: musl
     category: system
