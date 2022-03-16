@@ -1,6 +1,6 @@
 name: parted
 category: utils
-version: 3.3+2
+version: 3.3+3
 requires:
   - name: musl
     category: system
