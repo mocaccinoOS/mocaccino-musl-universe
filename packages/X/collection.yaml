@@ -303,7 +303,7 @@ packages:
     extension: "tar.bz2"
   - name: libXScrnSaver
     category: X
-    version: "1.2.3"
+    version: 1.2.3+1
     build_requires:
       - category: "X"
         name: "xorgproto"
