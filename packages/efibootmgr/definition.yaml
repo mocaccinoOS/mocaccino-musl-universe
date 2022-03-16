@@ -1,6 +1,6 @@
 name: efibootmgr
 category: utils
-version: 17+1
+version: "rhel-7.3-branchpoint"
 requires:
   - name: musl
     category: system
