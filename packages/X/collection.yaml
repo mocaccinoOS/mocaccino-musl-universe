@@ -88,7 +88,7 @@ packages:
     description: "X11 various extension wire protocol"
   - name: xorgproto
     category: X
-    version: "2020.1"
+    version: 2020.1+1
     build_requires:
       - category: "X"
         name: "util-macros"
