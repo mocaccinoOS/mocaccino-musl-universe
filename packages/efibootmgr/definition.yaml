@@ -1,6 +1,6 @@
 name: efibootmgr
 category: utils
-version: 17+1
+version: 17+2
 requires:
   - name: musl
     category: system
