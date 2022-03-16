@@ -111,7 +111,7 @@ packages:
     extension: "tar.bz2"
   - name: libXfixes
     category: X
-    version: "5.0.3"
+    version: 5.0.3+1
     build_requires:
       - category: "X"
         name: "util-macros"
