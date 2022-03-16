@@ -1,6 +1,6 @@
 name: linux-firmware
 category: kernel
-version: 20210315+2
+version: 20210315+3
 requires:
   - name: musl
     category: system
