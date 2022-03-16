@@ -640,7 +640,7 @@ packages:
     description: "X11 XKB extension wire protocol"
   - name: inputproto
     category: X
-    version: "2.3.2"
+    version: 2.3.2+1
     requires:
       - name: musl
         category: system
