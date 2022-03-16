@@ -77,7 +77,7 @@ packages:
         version: ">=0"
     base_url: "http://xorg.freedesktop.org/releases/individual/proto/"
     extension: "tar.gz"
-    version: "7.3.0"
+    version: 7.3.0+1
     requires:
       - name: musl
         category: system
