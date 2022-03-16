@@ -1,6 +1,6 @@
 name: sed
 category: utils
-version: 4.8+1
+version: 4.8+2
 requires:
   - name: musl
     category: system
