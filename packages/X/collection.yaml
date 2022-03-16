@@ -140,7 +140,7 @@ packages:
     extension: "tar.bz2"
   - name: libXcomposite
     category: X
-    version: "0.4.5"
+    version: 0.4.5+1
     build_requires:
       - category: "X"
         name: "util-macros"
