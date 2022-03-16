@@ -1,6 +1,6 @@
 name: libarchive
 category: utils
-version: "3.5.2"
+version: 3.5.2+1
 requires:
   - name: musl
     category: system
