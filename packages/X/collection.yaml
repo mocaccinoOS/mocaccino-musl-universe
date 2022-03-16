@@ -441,7 +441,7 @@ packages:
     description: "X11 client-side library"
   - name: libXaw
     category: X
-    version: "1.0.13"
+    version: 1.0.13+1
     build_requires:
       - category: "X"
         name: "util-macros"
