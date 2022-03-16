@@ -1,7 +1,7 @@
 packages:
   - name: libXpm
     category: X
-    version: "3.5.13"
+    version: 3.5.13+1
     build_requires:
       - category: "X"
         name: "xorgproto"
