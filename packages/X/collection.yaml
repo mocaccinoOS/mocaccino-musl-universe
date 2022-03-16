@@ -620,7 +620,7 @@ packages:
     description: "X11 Inter-Client Exchange library"
   - name: kbproto
     category: X
-    version: "1.0.7"
+    version: 1.0.7+1
     build_requires:
       - category: "X"
         name: "xtrans"
