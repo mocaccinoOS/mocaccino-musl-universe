@@ -242,7 +242,7 @@ packages:
     extension: "tar.bz2"
   - name: libXdamage
     category: X
-    version: "1.1.5"
+    version: 1.1.5+1
     build_requires:
       - category: "X"
         name: "util-macros"
