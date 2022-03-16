@@ -1,6 +1,6 @@
 name: tar
 category: utils
-version: 1.32+1
+version: 1.32+2
 requires:
   - name: musl
     category: system
