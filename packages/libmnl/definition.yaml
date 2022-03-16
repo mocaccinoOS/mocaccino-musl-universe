@@ -1,6 +1,6 @@
 name: libmnl
 category: libs
-version: 1.0.4+2
+version: 1.0.4+3
 uri:
   - https://www.netfilter.org/projects/libmnl/index.html
 license: "LGPLv2.1+"

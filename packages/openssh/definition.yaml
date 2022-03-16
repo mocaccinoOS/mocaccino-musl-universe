@@ -1,6 +1,6 @@
 name: openssh
 category: utils
-version: 8.3+4
+version: 8.3+5
 requires:
   - name: libressl
     category: "libs"

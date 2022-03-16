@@ -1,6 +1,6 @@
 name: attr
 category: development
-version: 2.4.48+1
+version: 2.4.48+2
 requires:
   - name: musl
     category: system

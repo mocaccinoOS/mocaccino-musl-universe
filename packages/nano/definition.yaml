@@ -1,6 +1,6 @@
 name: nano
 category: editors
-version: 2.5.0+2
+version: 2.5.0+3
 requires:
   - name: ncurses
     category: libs

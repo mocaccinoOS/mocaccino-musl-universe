@@ -1,6 +1,6 @@
 name: abuild
 category: development
-version: 3.7.0_rc1+1
+version: 3.7.0_rc1+2
 uri:
   - https://github.com/alpinelinux/abuild
 license: "GPL-2"

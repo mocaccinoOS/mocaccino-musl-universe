@@ -1,6 +1,6 @@
 name: rsync
 category: utils
-version: 3.2.3+1
+version: 3.2.3+2
 requires:
   - name: "util-linux"
     category: "utils"

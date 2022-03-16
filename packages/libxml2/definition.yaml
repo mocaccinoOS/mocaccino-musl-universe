@@ -1,6 +1,6 @@
 name: libxml2
 category: libs
-version: 2.9.10+3
+version: 2.9.10+4
 labels:
   github.repo: "libxml2"
   github.owner: "GNOME"

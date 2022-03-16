@@ -1,6 +1,6 @@
 name: wireguard-tools
 category: networking
-version: 1.0.20200827+1
+version: 1.0.20200827+2
 labels:
   github.repo: "wireguard-tools"
   github.owner: "WireGuard"

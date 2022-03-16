@@ -1,6 +1,6 @@
 name: jpeg-turbo
 category: libs
-version: 2.0.5+4
+version: 2.0.5+5
 labels:
   github.repo: "libjpeg-turbo"
   github.owner: "libjpeg-turbo"

@@ -1,6 +1,6 @@
 name: dracut
 category: system
-version: 050+2
+version: 050+3
 requires:
   - name: "bash"
     category: "shells"

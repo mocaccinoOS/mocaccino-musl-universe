@@ -1,5 +1,5 @@
 name: s6
-version: "2.11.0.1"
+version: 2.11.0.1+1
 category: init
 labels:
   github.owner: skarnet
