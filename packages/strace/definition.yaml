@@ -1,6 +1,6 @@
 name: strace
 category: utils
-version: "5.16"
+version: 5.16+1
 labels:
   github.repo: "strace"
   github.owner: "strace"
