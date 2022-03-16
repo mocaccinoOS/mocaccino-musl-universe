@@ -1,7 +1,7 @@
 packages:
   - name: libXpm
     category: X
-    version: "3.5.13"
+    version: 3.5.13+1
     build_requires:
       - category: "X"
         name: "xorgproto"
@@ -30,7 +30,7 @@ packages:
     extension: "tar.bz2"
   - name: libXmu
     category: X
-    version: "1.1.3"
+    version: 1.1.3+1
     build_requires:
       - category: "X"
         name: "xorgproto"
@@ -111,7 +111,7 @@ packages:
     extension: "tar.bz2"
   - name: libXfixes
     category: X
-    version: "5.0.3"
+    version: 5.0.3+1
     build_requires:
       - category: "X"
         name: "util-macros"
@@ -140,7 +140,7 @@ packages:
     extension: "tar.bz2"
   - name: libXcomposite
     category: X
-    version: "0.4.5"
+    version: 0.4.5+1
     build_requires:
       - category: "X"
         name: "util-macros"
@@ -175,7 +175,7 @@ packages:
     extension: "tar.bz2"
   - name: libXrender
     category: X
-    version: "0.9.10"
+    version: 0.9.10+1
     build_requires:
       - category: "X"
         name: "util-macros"
@@ -204,7 +204,7 @@ packages:
     extension: "tar.bz2"
   - name: libXcursor
     category: X
-    version: "1.2.0"
+    version: 1.2.0+1
     build_requires:
       - category: "X"
         name: "libXrender"
@@ -242,7 +242,7 @@ packages:
     extension: "tar.bz2"
   - name: libXdamage
     category: X
-    version: "1.1.5"
+    version: 1.1.5+1
     build_requires:
       - category: "X"
         name: "util-macros"
@@ -303,7 +303,7 @@ packages:
     extension: "tar.bz2"
   - name: libXScrnSaver
     category: X
-    version: "1.2.3"
+    version: 1.2.3+1
     build_requires:
       - category: "X"
         name: "xorgproto"
@@ -348,7 +348,7 @@ packages:
         name: "libSM"
         version: ">=0"
     category: X
-    version: "1.2.0"
+    version: 1.2.0+1
     requires:
       - name: musl
         category: system
@@ -374,7 +374,7 @@ packages:
         name: "libXau"
         version: ">=0"
     category: X
-    version: "1.3.3"
+    version: 1.3.3+1
     requires:
       - name: musl
         category: system
@@ -410,7 +410,7 @@ packages:
     extension: "tar.bz2"
   - name: libxcb
     category: X
-    version: "1.14"
+    version: 1.14+1
     build_requires:
       - category: "X"
         name: "xtrans"
@@ -441,7 +441,7 @@ packages:
     description: "X11 client-side library"
   - name: libXaw
     category: X
-    version: "1.0.13"
+    version: 1.0.13+1
     build_requires:
       - category: "X"
         name: "util-macros"
@@ -528,7 +528,7 @@ packages:
     description: "X.Org Autotools macros"
   - name: libX11
     category: X
-    version: "1.6.12"
+    version: 1.6.12+1
     build_requires:
       - category: "X"
         name: "xtrans"
@@ -565,7 +565,7 @@ packages:
     description: "X11 client-side library"
   - name: libSM
     category: X
-    version: "1.2.3"
+    version: 1.2.3+1
     build_requires:
       - category: "X"
         name: "xtrans"
@@ -660,7 +660,7 @@ packages:
     description: "X11 Input extension wire protocol"
   - name: xcb-proto
     category: X
-    version: "1.14.1"
+    version: "xcb-proto-1.9"
     build_requires:
       - category: "X"
         name: "xtrans"
