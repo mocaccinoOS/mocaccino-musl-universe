@@ -660,7 +660,7 @@ packages:
     description: "X11 Input extension wire protocol"
   - name: xcb-proto
     category: X
-    version: "1.14.1"
+    version: 1.14.1+1
     build_requires:
       - category: "X"
         name: "xtrans"
