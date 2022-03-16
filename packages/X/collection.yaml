@@ -486,7 +486,7 @@ packages:
       - category: "X"
         name: "xproto"
         version: ">=0"
-    version: "1.0.9"
+    version: 1.0.9+1
     requires:
       - name: musl
         category: system
