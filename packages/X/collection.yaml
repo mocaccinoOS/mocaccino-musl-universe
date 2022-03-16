@@ -204,7 +204,7 @@ packages:
     extension: "tar.bz2"
   - name: libXcursor
     category: X
-    version: "1.2.0"
+    version: 1.2.0+1
     build_requires:
       - category: "X"
         name: "libXrender"
