@@ -1,6 +1,6 @@
 name: libxslt
 category: libs
-version: 1.1.34+2
+version: "1.1.35"
 labels:
   github.repo: "libxslt"
   github.owner: "GNOME"
