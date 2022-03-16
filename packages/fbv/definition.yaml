@@ -1,6 +1,6 @@
 name: fbv
 category: utils
-version: 0.20200718+4
+version: 0.20200718+5
 requires:
   - category: libs
     name: jpeg
